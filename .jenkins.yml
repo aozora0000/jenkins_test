@@ -3,4 +3,4 @@ container: jenkins-ci-base
 script:
 	- cat ./README.md
 after_script:
-	- curl --data-urlencode "source=ビルド完了通知" $HOOK_API
+	- curl --data-urlencode "source=ビルド完了通知" ${HOOK_API}
