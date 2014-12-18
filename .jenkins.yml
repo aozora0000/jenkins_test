@@ -1,0 +1,4 @@
+container: jenkins-ci-base
+
+script:
+	- cat ./README.md
