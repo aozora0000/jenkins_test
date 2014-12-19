@@ -1,6 +1,6 @@
 container: jenkins-ci-base
 env:
-    - name: Jenkins
+    - NAME: Jenkins
 script:
-    - echo "Hello Jenikins!"
+    - echo "Hello ${NAME}"
     - cat ./README.md
