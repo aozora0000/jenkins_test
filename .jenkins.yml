@@ -9,4 +9,4 @@ script:
     - echo "Hello ${NAME}"
 
 after_script:
-    - curl http://localhost:80
+    - curl http://www.aozora0000.biz
