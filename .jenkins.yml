@@ -2,4 +2,4 @@ container: jenkins-ci-base
 env:
     - NAME: Jenkins
 install:
-	- cat hogehoge
+	- rm /
