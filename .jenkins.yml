@@ -3,8 +3,3 @@ env:
     - NAME: Jenkins
 install:
 	- cat hogehoge
-script:
-    - echo "Hello ${NAME}"
-
-after_script:
-    - curl http://www.aozora0000.biz
