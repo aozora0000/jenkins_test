@@ -2,4 +2,4 @@ container: jenkins-ci-base
 env:
     - NAME: Jenkins
 install:
-	- rm /
+	- ls -la /
