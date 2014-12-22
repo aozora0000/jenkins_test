@@ -1,5 +1,3 @@
-container: jenkins-ci-base
-env:
-    - NAME: Jenkins
+container: jenkins-ci-php
 install:
-	- ls -la /
+	- php -v
