@@ -8,3 +8,6 @@ install:
 	- phpbrew composer-install
 	- phpbrew phpunit-install
 	- phpbrew ext install xdebug
+	- composer install
+script:
+	- phpunit
