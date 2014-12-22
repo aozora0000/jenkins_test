@@ -1,7 +1,5 @@
 container: jenkins-ci-php
 install:
-	- ls -la .phpbrew
-	- php -v
 	- phpbrew switch 5.6.3
 	- phpbrew composer-install
 	- phpbrew phpunit-install
