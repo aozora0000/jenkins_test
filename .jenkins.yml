@@ -1,5 +1,8 @@
 container: jenkins-ci-php
 install:
 	- php -v
-	- which php
+	- phpbrew init
+	- source ~/.phpbrew/bashrc
+	- phpbrew install 5.6.3
 	- phpbrew switch 5.6.3
+	- php -v
