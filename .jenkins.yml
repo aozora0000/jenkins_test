@@ -1,4 +1,4 @@
-container: jenkins-ci-php
+container: jenkins-ci-php:latest
 install:
 	- composer install
 script:
