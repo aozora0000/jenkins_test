@@ -1,6 +1,6 @@
 container: jenkins-ci-php
 install:
-	- php -v
+	- phpbrew install-composer
 	- composer install
 script:
 	- phpunit
