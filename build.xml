@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="phingtest" default="build">
+  <property name="basedir" value="${phing.dir}" />
+  <property name="logdir"  value="${basedir}/report" />
+  <target name="build" depends="clean,prepare,phpcs,phpmd,phpcpd,phpunit">
+  </target>
+  <target name="clean" description="clean">
+    <delete dir="${logdir}" />
+  </target>
+  <target name="prepare" description="prepare">
+    <mkdir dir="${logdir}" />
+  </target>
+  <target name="phpcs" description="PHPCS">
+    <phpcodesniffer standard="psr0" file="./" allowedFileExtensions="php">
+      <formatter type="checkstyle" outfile="${logdir}/phpcs.xml" />
+    </phpcodesniffer>
+  </target>
+  <target name="phpmd" description="PHPMD">
+    <exec dir="${basedir}" executable="phpmd" output="${logdir}/phpmd.log">
+      <arg line="./" />
+      <arg line="xml" />
+      <arg line="${basedir}/phpmd-rule.xml" />
+      <arg line="--reportfile ${logdir}/phpmd.xml" />
+      <arg line="--suffixes php" />
+    </exec>
+  </target>
+  <target name="phpcpd" description="PHPCPD">
+    <exec dir="${basedir}" executable="phpcpd" output="${logdir}/phpcpd.log">
+      <arg line="--log-pmd ${logdir}/phpcpd.xml" />
+      <arg line="--names *.php,*.phtml" />
+      <arg line="./" />
+    </exec>
+  </target>
+  <target name="phpunit" description="run phpunit">
+    <exec dir="${basedir}/tests" executable="phpunit" output="${logdir}/phpunit.log">
+      <arg line="--configuration=${basedir}/tests/phpunit.xml" />
+      <arg line="--log-junit=${logdir}/phpunit.xml" />
+      <arg line="--coverage-html=${logdir}/coverage/" />
+      <arg line="--coverage-clover=${logdir}/coverage.xml" />
+    </exec>
+  </target>
+</project>
