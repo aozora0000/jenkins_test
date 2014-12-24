@@ -1,3 +1,5 @@
 container: jenkins-ci-php
+install:
+	- composer install
 script:
 	- phpunit
