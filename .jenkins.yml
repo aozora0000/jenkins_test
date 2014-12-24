@@ -1,6 +1,6 @@
 container: jenkins-ci-php:latest
 install:
-	- composer install
+	- composer update
 script:
 	- phpunit
 after_script:
