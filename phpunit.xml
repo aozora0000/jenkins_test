@@ -22,12 +22,13 @@
     <filter>
         <!-- コードカバレッジ率を計測する対象の指定 -->
         <whitelist>
-            <directory suffix=".php">./src/</directory>
+            <directory suffix=".php">./src</directory>
         </whitelist>
         <!-- コードカバレッジ測定対象から除外 -->
         <blacklist>
             <directory suffix=".php">./vendor</directory>
             <directory suffix=".php">./test</directory>
+            <directory suffix=".php">./report</directory>
         </blacklist>
     </filter>
 </phpunit>

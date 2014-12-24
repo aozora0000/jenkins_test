@@ -26,6 +26,8 @@
         <!-- コードカバレッジ測定対象から除外 -->
         <blacklist>
             <directory suffix=".php">./vendor/</directory>
+            <directory suffix=".php">./test</directory>
+            <directory suffix=".php">./report</directory>
         </blacklist>
     </filter>
 </phpunit>
