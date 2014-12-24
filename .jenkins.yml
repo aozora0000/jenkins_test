@@ -2,4 +2,4 @@ container: jenkins-ci-php
 install:
 	- composer install
 script:
-	- phpunit
+	- phpunit --log-junit ./report/junit.xml --coverage-html ./report/ --coverage-clover ./report/coverage.xml ./report/html
