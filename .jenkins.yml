@@ -3,3 +3,5 @@ install:
 	- composer install
 script:
 	- phpunit
+after_script:
+	- rm -rf vendor
