@@ -1,7 +1,8 @@
-container: jenkins-ci-php:5.4.36
+container: jenkins-ci-php:latest
 install:
 	- composer update
 script:
+	- php -m
 	- phpunit
 after_script:
 	- rm -rf vendor
