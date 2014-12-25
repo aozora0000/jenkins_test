@@ -1,4 +1,4 @@
-container: jenkins-ci-php:latest
+container: jenkins-ci-php:5.4.36
 install:
 	- composer update
 script:
