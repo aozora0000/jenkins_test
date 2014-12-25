@@ -1,10 +1,7 @@
 container: jenkins-ci-php:latest
 install:
 	- composer update
-	- phpbrew ext install xmlreader
-	- phpbrew ext install xmlwriter
 script:
-	- php -m
 	- phpunit
 after_script:
 	- rm -rf vendor
