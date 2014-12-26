@@ -1,7 +1,9 @@
-container: jenkins-ci-php:latest
-install:
-	- composer update
-script:
-	- phpunit
-after_script:
-	- rm -rf vendor
+container: aozora0000/jenkins-ci-php
+steps:
+    - name: composerインストール
+      code: composer update
+    - name: PHPUNIT起動
+      code: phpunit
+notify:
+    - service: idobata
+      token: 4f18052e-28cb-447a-9704-c12cff0575d4
