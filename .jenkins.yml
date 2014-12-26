@@ -7,7 +7,3 @@ steps:
 notify:
     - service: idobata
       token: $IDOBATA_TOKEN
-    - service: hipchat
-      token: $HIPCHAT_TOKEN
-      room_id: $HIPCHAT_ROOM_ID
-      from: Jenkins
