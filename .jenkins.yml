@@ -7,3 +7,6 @@ steps:
 notify:
     - service: idobata
       token: $IDOBATA_TOKEN
+    - service: irc
+      room_id: test
+      ikachan: http://localhost:4649
