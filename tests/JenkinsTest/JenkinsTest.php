@@ -9,6 +9,6 @@ class JenkinsTest extends PHPUnit_Framework_TestCase {
     }
     public function test3() {
         $jenkins = new Jenkins\Jenkins;
-        $this->assertTrue($jenkins->test2(1));
+        $this->assertTrue($jenkins->test2("これはテストです"));
     }
 }
