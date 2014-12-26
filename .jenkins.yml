@@ -6,4 +6,4 @@ steps:
       code: phpunit
 notify:
     - service: idobata
-      token: 4f18052e-28cb-447a-9704-c12cff0575d4
+      token: $IDOBATA_TOKEN
