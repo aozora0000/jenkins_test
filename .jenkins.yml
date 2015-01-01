@@ -7,3 +7,6 @@ steps:
 notify:
     - service: idobata
       token: $IDOBATA_TOKEN
+    - service: chatwork
+      token: $CHATWORK_TOKEN
+      room_id: $CHATWORK_ROOM_ID
