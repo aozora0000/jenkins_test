@@ -3,8 +3,6 @@ links:
     - name: redis
       container: redis
 steps:
-    - name: env表示
-      code: env
     - name: php-redisインストール
       code: phpbrew -q ext install redis
     - name: composerインストール
