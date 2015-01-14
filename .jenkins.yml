@@ -1,5 +1,10 @@
 container: aozora0000/jenkins-ci-php
+links:
+    - name: redis
+      container: redis
 steps:
+    - name: php-redisインストール
+      code: phpbrew ext install redis
     - name: composerインストール
       code: composer update
     - name: PHPUNIT起動
