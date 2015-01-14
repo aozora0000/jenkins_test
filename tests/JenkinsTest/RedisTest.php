@@ -6,7 +6,7 @@ class RedisTest extends PHPUnit_Framework_TestCase {
             $host = (isset($_ENV['REDIS_PORT_6379_TCP_ADDR'])) ? $_ENV['REDIS_PORT_6379_TCP_ADDR'] : "127.0.0.1";
             $port = (isset($_ENV['REDIS_PORT_6379_TCP_PORT'])) ? $_ENV['REDIS_PORT_6379_TCP_PORT'] : "6379";
             $this->redis->connect($host,$port);
-        } catch (Exception $e) {
+        } catch (RedisException $e) {
             $this->fail("Redisに接続出来ませんでした。");
         }
     }
