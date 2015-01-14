@@ -6,7 +6,7 @@ steps:
     - name: env表示
       code: env
     - name: php-redisインストール
-      code: phpbrew ext install redis -q --no-progress
+      code: phpbrew ext install -q --no-progress redis
     - name: composerインストール
       code: composer update
     - name: PHPUNIT起動
